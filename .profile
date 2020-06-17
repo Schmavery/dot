@@ -9,7 +9,7 @@ alias npm=yarn
 alias pie='racket -l pie -i'
 alias codaport='lsof -i:3085'
 alias ev='esy nvim'
-alias dotfiles='/usr/bin/git --git-dir=/Users/avery/.dotfiles/ --work-tree=/Users/avery'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 fl () {
   fd $1 --no-ignore-vcs | tail -n1
