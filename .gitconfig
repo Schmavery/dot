@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Avery Morin
+#	email = avery.schmavery@gmail.com
+[user]
+	email = avery.schmavery@gmail.com
+[credential]
+	helper = store
+[submodule]
+	recurse = true
+[core]
+	excludesfile = /Users/avery/.gitignore
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	push-new = push -u origin HEAD
+[rebase]
+	autoStash = true
