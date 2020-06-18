@@ -2,21 +2,36 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
+
 brew "coreutils"
-brew "fd"
 brew "git-lfs"
 brew "gnu-sed"
 brew "grep"
 brew "mas"
-brew "neovim", args: ["HEAD"]
-brew "node"
 brew "pkg-config"
-brew "python"
-brew "ripgrep"
-brew "tmux"
 brew "watch"
 brew "watchman"
+
+brew "tmux"
+brew "fd"
+brew "ripgrep"
+
+brew "node"
+brew "python"
+
+brew "neovim", args: ["HEAD"]
+cask "sublime-text"
+cask "visual-studio-code"
+
+cask "firefox"
+cask "google-chrome"
+
+cask "docker"
+
+# Built-in stuff
 mas "GarageBand", id: 682658836
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+
+mas "1Password 7 - Password Manager", id: 1333542190
