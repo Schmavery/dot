@@ -3,7 +3,7 @@
 	// "suggest.enablePreview": true,
   // "coc.preferences.codeLens.enable": true,
 	"suggest.snippetIndicator": "⭐︎",
-  "coc.preferences.formatOnSaveFiletypes": ["reason"],
+  "coc.preferences.formatOnSaveFiletypes": ["reason", "javascript", "javascriptreact"],
 	"suggest.triggerAfterInsertEnter": true,
   "languageserver": {
     "reason": {

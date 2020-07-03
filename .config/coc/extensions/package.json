@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "coc-json": "^1.0.17",
+    "coc-prettier": ">=1.1.14",
+    "coc-rls": "^1.0.11"
+  }
+}
