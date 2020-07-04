@@ -21,6 +21,7 @@ brew "node"
 brew "python"
 
 cask "iterm2"
+cask "dotnet-sdk"
 
 brew "neovim", args: ["HEAD"]
 cask "sublime-text"

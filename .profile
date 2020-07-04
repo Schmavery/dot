@@ -6,15 +6,10 @@ alias ls='ls -G'
 alias vi='nvim'
 alias f='find . -name '
 alias gs='git status'
-alias npm=yarn
 alias pie='racket -l pie -i'
 alias codaport='lsof -i:3085'
 alias ev='esy nvim'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-fl () {
-  fd $1 --no-ignore-vcs | tail -n1
-}
 
 source ~/.git-prompt.sh
 #export PS1='mbp:\W \u\$ '
