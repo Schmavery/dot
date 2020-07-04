@@ -17,8 +17,14 @@ Plug 'unisonweb/unison', {'rtp': 'editor-support/vim'}
 Plug 'junegunn/goyo.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/ShowTrailingWhitespace'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
+colorscheme dracula
+
+if $COLORTERM == 'truecolor'
+  set termguicolors
+endif
 
 set autoread
 set signcolumn=yes " Can't decide if I like this
@@ -28,7 +34,6 @@ set expandtab
 set number
 set ruler
 set rulerformat=%50(%=%#SpecialKey#%F%#VisualNOS#%2c%)
-set background=dark
 set tw=79       " width of document (used by gd)
 set nowrap      " don't automatically wrap on load
 set fo-=t       " don't automatically wrap text when typing
@@ -52,7 +57,13 @@ set t_ti=
 " set mouse=a disable mouse to enable copy from terminal
 set noshowcmd
 set nolazyredraw
+set inccommand=split
+
+" Don't change the line ending
+set nofixeol
+
 let mapleader = "\<Space>"
+
 
 nnoremap <C-w><C-m> <C-w>\|<C-w>_
 nnoremap <C-w><C-=> <C-w>=
@@ -218,4 +229,3 @@ augroup TerminalStuff
 	autocmd TermOpen * setlocal nonumber norelativenumber
 augroup END
 let g:neoterm_autoscroll = 1
-

@@ -1,4 +1,8 @@
-# Adapted from https://github.com/holman/dotfiles/blob/master/macos/set-defaults.sh
+if [ "${SHELL}" != "/bin/bash" ]; then
+  chsh -s /bin/bash
+  echo "Changed default shell to bash"
+  exit
+fi
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -22,9 +26,6 @@ defaults write com.apple.Safari ShowFavoritesBar -bool false
 # Turn off some icloud stuff
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
-# Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
-
 # Remove the animation when hiding/showing the Dock
 defaults write com.apple.dock autohide-time-modifier -float 0
 # Automatically hide and show the Dock
@@ -36,10 +37,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-# Use scroll gesture with the Ctrl (^) modifier key to zoom
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -72,8 +69,17 @@ defaults write com.apple.TextEdit RichText -int 0
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 
-if test ! $(which brew)
-then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew bundle install --file ~/scripts/
+# Get the email of the current appleid
+EMAIL=`/usr/libexec/PlistBuddy -c "print :Accounts:0:AccountID" ~/Library/Preferences/MobileMeAccounts.plist`
+
+# Generate new ssh key
+if [ ! -f ~/.ssh/id_rsa ]; then
+  ssh-keygen -t rsa -b 4096 -C "$EMAIL"
 fi
+
+if test ! `which brew`
+then
+  /usr/bin/ruby -e "`curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install`"
+fi
+
+brew bundle install --file ~/scripts/Brewfile

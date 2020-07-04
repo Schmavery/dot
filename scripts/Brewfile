@@ -19,6 +19,8 @@ brew "ripgrep"
 brew "node"
 brew "python"
 
+cask "iterm2"
+
 brew "neovim", args: ["HEAD"]
 cask "sublime-text"
 cask "visual-studio-code"
@@ -27,11 +29,6 @@ cask "firefox"
 cask "google-chrome"
 
 cask "docker"
-
-# Built-in stuff
-mas "GarageBand", id: 682658836
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
+cask "rectangle"
 
 mas "1Password 7 - Password Manager", id: 1333542190
