@@ -18,6 +18,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-scripts/ShowTrailingWhitespace'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 colorscheme dracula

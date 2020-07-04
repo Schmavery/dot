@@ -11,6 +11,7 @@ brew "mas"
 brew "pkg-config"
 brew "watch"
 brew "watchman"
+# brew "mysql"
 
 brew "tmux"
 brew "fd"
