@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 
+brew "bash"
 brew "coreutils"
 brew "git-lfs"
 brew "gnu-sed"
@@ -31,6 +32,7 @@ cask "firefox"
 cask "google-chrome"
 
 cask "docker"
+cask "postman"
 cask "rectangle"
 
 mas "1Password 7 - Password Manager", id: 1333542190

@@ -120,9 +120,9 @@ augroup END
 " python-specific settings
 augroup python
   au BufNewFile,BufRead *.py
-    \ setlocal tabstop=2 |
-    \ setlocal softtabstop=2 |
-    \ setlocal shiftwidth=2 |
+    \ setlocal tabstop=4 |
+    \ setlocal softtabstop=4 |
+    \ setlocal shiftwidth=4 |
     \ setlocal expandtab |
     \ setlocal fileformat=unix |
 augroup END
@@ -230,3 +230,5 @@ augroup TerminalStuff
 	autocmd TermOpen * setlocal nonumber norelativenumber
 augroup END
 let g:neoterm_autoscroll = 1
+
+let &shell='/usr/local/bin/bash --rcfile ~/.profile'

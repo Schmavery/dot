@@ -1,8 +1,3 @@
-if [ "${SHELL}" != "/bin/bash" ]; then
-  chsh -s /bin/bash
-  echo "Changed default shell to bash"
-  exit
-fi
 
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
@@ -83,3 +78,9 @@ then
 fi
 
 brew bundle install --file ~/scripts/Brewfile
+
+if [ "${SHELL}" != "/usr/local/bin/bash" ]; then
+  chsh -s /usr/local/bin/bash
+  echo "Changed default shell to bash"
+  exit
+fi
