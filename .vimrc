@@ -213,7 +213,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 
 " make error text to black color
-highlight CocErrorFloat ctermfg=Black  guifg=#000000
+" highlight CocErrorFloat ctermfg=Black  guifg=#000000
+" hi! CocErrorFloat guifg=#d1666a
 " Make paren match less annoying
 highlight MatchParen cterm=bold ctermbg=none ctermfg=red
 
