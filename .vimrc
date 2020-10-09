@@ -106,6 +106,7 @@ au BufNewFile,BufRead *.re set filetype=reason
 au BufNewFile,BufRead *.rei set filetype=reason
 au BufNewFile,BufRead *.mdx set filetype=markdown
 au BufNewFile,BufRead *.lean set filetype=lean
+au BufNewFile,BufRead *.fs set filetype=fsharp
 
 " Turn off some things for quickfix window
 au FileType qf setlocal nonumber colorcolumn=
