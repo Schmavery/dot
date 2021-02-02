@@ -18,6 +18,8 @@
 	required = true
 [alias]
 	push-new = push -u origin HEAD
+[alias]
+	pp = !git pull && git push
 [rebase]
 	autoStash = true
 [pull]
