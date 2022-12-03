@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+.dotfiles
+hostedBuildAndRun.sh
+
+# direnv files
+.envrc
+.direnvrc
